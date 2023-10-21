@@ -15,7 +15,7 @@ export const AnimeDataProvider = ({ children }) => {
 const GetData = async () => {
     try {
       const  response = await axios.get(
-        `https://api.themoviedb.org/3/trending/all/day?api_key=c6558d95ac710c9251788e05036ca218`
+        `https://api.themoviedb.org/3/trending/all/day?api_key=`
       );
       setFisrtSix(response.data.results.slice(0, 8));
       setLoading(false);
