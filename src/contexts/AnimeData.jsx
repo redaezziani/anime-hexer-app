@@ -4,7 +4,7 @@ import axios from "axios";
 export const AnimeDataContext = createContext();
 
 export const AnimeDataProvider = ({ children }) => {
-  const [animeData, setAnimeData] = useState([]);
+  const [FisrtSix, setFisrtSix ] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -13,15 +13,12 @@ export const AnimeDataProvider = ({ children }) => {
   }, []);
 
 const GetData = async () => {
-    // lets fetch from myanimelist api
-
     try {
-      const { data } = await axios.get(
-        "https://api.jikan.moe/v3/top/anime/1/bypopularity"
+      const  response = await axios.get(
+        `https://api.themoviedb.org/3/trending/all/day?api_key=c6558d95ac710c9251788e05036ca218`
       );
-      setAnimeData(data.top);
+      setFisrtSix(response.data.results.slice(0, 8));
       setLoading(false);
-      
     } catch (error) {
       setError(error);
       setLoading(false);
@@ -29,7 +26,7 @@ const GetData = async () => {
   };
   
   const animeDataContextValues = {
-    animeData,
+    FisrtSix,
     loading,
     error,
   };

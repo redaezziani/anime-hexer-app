@@ -13,27 +13,28 @@ import {
         </MenuHandler>
         <MenuList>
           <MenuItem
-          className="font-Cairo text-xs hover:text-orange-500"
+          color="lightBlue"
+          className="font-Cairo text-xs hover:text-sky-500"
           > 
           Profile
           </MenuItem>
           <MenuItem
-          className="font-Cairo text-xs hover:text-orange-500"
+          className="font-Cairo text-xs hover:text-sky-500"
           >
             Favorites
           </MenuItem>
           <MenuItem
-          className="font-Cairo text-xs hover:text-orange-500"
+          className="font-Cairo text-xs hover:text-sky-500"
           >
             Buy Premium
           </MenuItem>
           <MenuItem
-          className="font-Cairo text-xs hover:text-orange-500"
+          className="font-Cairo text-xs hover:text-sky-500"
           >
             Settings
           </MenuItem>
           <MenuItem
-          className="font-Cairo text-xs hover:text-orange-500"
+          className="font-Cairo text-xs hover:text-sky-500"
           >
             Help
           </MenuItem>
